@@ -6,5 +6,5 @@ The project relates to [TypeScript 4 In-Depth](https://app.pluralsight.com/libra
 
 Program is executed from the command line using Node.js:
 
-- install TS globally and use terminal of your choice, navigate to project folder and run `tsc --target es6 --outDir js --watch app.ts` to compile the app into `js` folder
-- open second terminal, go to `js` folder and run `node app.js` command
+- install TS globally and use terminal of your choice; navigate to project folder and run `tsc` command to compile the app into `js` folder
+- open second terminal and go to `js` folder; run `node app.js` command to run the app
