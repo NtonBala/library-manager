@@ -4,7 +4,8 @@ App modelling a library information system in TypeScript. The app models entitie
 
 The project relates to [TypeScript 4 In-Depth](https://app.pluralsight.com/library/courses/typescript-4-in-depth/table-of-contents) Pluralsight course by [Brice Wilson](https://app.pluralsight.com/profile/author/brice-wilson), course repo may be found [here](https://github.com/bricewilson/TypeScript-4-in-depth).
 
-Program is executed from the command line using Node.js:
+Program is executed from the command line:
 
-- install TS globally and use terminal of your choice; navigate to project folder and run `tsc` command to compile the app into `js` folder
-- open second terminal and go to `js` folder; run `node app.js` command to run the app
+- install Node.JS and TS (globally)
+- open terminal of your choice, navigate to project folder and run `tsc` command to compile the app
+- open second terminal and go to `js` folder, run `node app.js` command to run the app
