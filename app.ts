@@ -1,9 +1,15 @@
 function GetAllBooks() {
   let books = [
-    { title: 'Ulysses', author: 'James Joyce', available: true, category: Category.Fiction },
-    { title: 'A Farewell to Arms', author: 'Ernest Hemingway', available: false, category: Category.Fiction },
-    { title: 'I Know Why the Caged Bird Sings', author: 'Maya Angelou', available: true, category: Category.Poetry },
-    { title: 'Moby Dick', author: 'Herman Melville', available: true, category: Category.Fiction },
+    { id: 1, title: 'Ulysses', author: 'James Joyce', available: true, category: Category.Fiction },
+    { id: 2, title: 'A Farewell to Arms', author: 'Ernest Hemingway', available: false, category: Category.Fiction },
+    {
+      id: 3,
+      title: 'I Know Why the Caged Bird Sings',
+      author: 'Maya Angelou',
+      available: true,
+      category: Category.Poetry,
+    },
+    { id: 4, title: 'Moby Dick', author: 'Herman Melville', available: true, category: Category.Fiction },
   ];
 
   return books;
@@ -53,6 +59,14 @@ enum Category {
   Children,
 }
 
-const poetryBooks = GetBookTitlesByCategory(Category.Poetry);
+function GetBookById(id: number) {
+  const allBooks = GetAllBooks();
 
-LogBookTitles(poetryBooks);
+  return allBooks.filter((book) => book.id === id)[0];
+}
+
+// * Program code:
+
+const fictionBooks = GetBookTitlesByCategory(Category.Fiction);
+
+fictionBooks.forEach((val, idx, arr) => console.log(++idx + ' - ' + val));
