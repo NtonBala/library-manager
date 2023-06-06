@@ -1,6 +1,7 @@
 import { Category } from './enums';
+import { Book } from './interfaces';
 
-function GetAllBooks() {
+function GetAllBooks(): Book[] {
   let books = [
     { id: 1, title: 'Ulysses', author: 'James Joyce', available: true, category: Category.Fiction },
     { id: 2, title: 'A Farewell to Arms', author: 'Ernest Hemingway', available: false, category: Category.Fiction },
@@ -53,7 +54,7 @@ function LogBookTitles(titles: string[]): void {
   }
 }
 
-function GetBookById(id: number) {
+function GetBookById(id: number): Book {
   const allBooks = GetAllBooks();
 
   return allBooks.filter((book) => book.id === id)[0];
