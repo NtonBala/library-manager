@@ -115,29 +115,20 @@ function GetTitles(author: string, available?: boolean): string[] {
   return searchResults;
 }
 
+function PrintBook(currentBook: Book) {
+  console.log(currentBook.title + ' by ' + currentBook.author);
+}
+
 // * Program code:
-let myBooks: string[] = GetTitles('James Joyce', false);
+let myBook: Book = {
+  id: 5,
+  title: 'Pride and Prejudice',
+  author: 'Jane Austen',
+  available: true,
+  category: Category.Fiction,
+  pages: 250,
+  markDamaged: (reason: string) => console.log('Damaged: ' + reason),
+};
 
-myBooks.forEach((title) => console.log(title));
-
-// LogFirstAvailable();
-
-// let fictionBooks = GetBookTitlesByCategory();
-// fictionBooks.forEach((title) => console.log(title));
-
-// CreateCustomer('Michelle');
-// CreateCustomer('Leigh', 6);
-// CreateCustomer('Michelle', 12, 'Atlanta');
-
-// let x: number;
-// let IdGenerator: (chars: string, nums: number) => string;
-// x = 5;
-// IdGenerator = (name: string, id: number): string => {
-//   return name + id;
-// };
-
-// let myID: string = IdGenerator('daniel', 20);
-// console.log(myID);
-
-// const fictionBooks = GetBookTitlesByCategory(Category.Fiction);
-// fictionBooks.forEach((val, idx, arr) => console.log(++idx + ' - ' + val));
+PrintBook(myBook);
+myBook.markDamaged('missing back cover');
