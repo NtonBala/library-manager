@@ -1,3 +1,5 @@
+import { Category } from './enums';
+
 function GetAllBooks() {
   let books = [
     { id: 1, title: 'Ulysses', author: 'James Joyce', available: true, category: Category.Fiction },
@@ -49,14 +51,6 @@ function LogBookTitles(titles: string[]): void {
   for (let title of titles) {
     console.log(title);
   }
-}
-
-enum Category {
-  Biography,
-  Poetry,
-  Fiction,
-  History,
-  Children,
 }
 
 function GetBookById(id: number) {
