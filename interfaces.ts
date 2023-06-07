@@ -1,5 +1,9 @@
 import { Category } from './enums';
 
+interface DamageLogger {
+  (reason: string): void;
+}
+
 interface Book {
   id: number;
   title: string;
@@ -7,7 +11,7 @@ interface Book {
   available: boolean;
   category: Category;
   pages?: number;
-  markDamaged?: (reason: string) => void;
+  markDamaged?: DamageLogger;
 }
 
-export { Book };
+export { Book, DamageLogger };
