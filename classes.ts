@@ -10,4 +10,17 @@ class UniversityLibrarian implements Librarian {
   }
 }
 
-export { UniversityLibrarian };
+class ReferenceItem {
+  title: string;
+  year: number;
+
+  constructor() {
+    console.log('Creating a new ReferenceItem...');
+  }
+
+  printItem() {
+    console.log(`${this.title} was published in ${this.year}.`);
+  }
+}
+
+export { UniversityLibrarian, ReferenceItem };
