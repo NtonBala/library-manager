@@ -30,12 +30,12 @@ function LogFirstAvailable(books = GetAllBooks()): void {
     }
   }
 
-  console.log('Total Books: ' + numberOfBooks);
-  console.log('First Available: ' + firstAvailable);
+  console.log(`Total Books: ${numberOfBooks}`);
+  console.log(`First Available: ${firstAvailable}`);
 }
 
 function GetBookTitlesByCategory(categoryFilter: Category = Category.Fiction): Array<string> {
-  console.log('Getting books in category: ' + Category[categoryFilter]);
+  console.log(`Getting books in category: ${Category[categoryFilter]}`);
 
   const allBooks = GetAllBooks();
   const filteredTitles: string[] = [];
@@ -62,14 +62,14 @@ function GetBookById(id: number): Book {
 }
 
 function CreateCustomerId(name: string, id: number): string {
-  return name + id;
+  return `${name}${id}`;
 }
 
 function CreateCustomer(name: string, age?: number, city?: string) {
-  console.log('Creating customer ' + name);
+  console.log(`Creating customer ${name}`);
 
   if (age) {
-    console.log('Age: ', age);
+    console.log(`Age: ${age}`);
   }
 
   if (city) {
@@ -78,7 +78,7 @@ function CreateCustomer(name: string, age?: number, city?: string) {
 }
 
 function CheckoutBooks(customer: string, ...bookIDs: number[]): string[] {
-  console.log('Checking out books for ' + customer);
+  console.log(`Checking out books for ${customer}`);
 
   let booksCheckedOut: string[] = [];
 
@@ -117,7 +117,7 @@ function GetTitles(author: string, available?: boolean): string[] {
 }
 
 function PrintBook(currentBook: Book) {
-  console.log(currentBook.title + ' by ' + currentBook.author);
+  console.log(`${currentBook.title} by ${currentBook.author}`);
 }
 
 // * Program code:
