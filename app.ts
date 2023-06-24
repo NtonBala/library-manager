@@ -121,8 +121,8 @@ function PrintBook(currentBook: Book) {
 }
 
 // * Program code:
-let ref = new ReferenceItem();
+let ref: ReferenceItem = new ReferenceItem('Updated Facts and Figures', 2023);
 
-ref.title = 'Facts and Figures';
-ref.year = 2022;
 ref.printItem();
+ref.publisher = 'Random Data Publishing';
+console.log(ref.publisher);
