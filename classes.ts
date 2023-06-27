@@ -32,4 +32,8 @@ class ReferenceItem {
   }
 }
 
-export { UniversityLibrarian, ReferenceItem };
+class Encyclopedia extends ReferenceItem {
+  edition: number;
+}
+
+export { UniversityLibrarian, ReferenceItem, Encyclopedia };
