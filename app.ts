@@ -121,7 +121,7 @@ function PrintBook(currentBook: Book) {
 }
 
 // * Program code:
-let refBook = new Encyclopedia('WorldPedia', 1900);
+let refBook = new Encyclopedia('WorldPedia', 1900, 10);
 refBook.printItem();
 
 // let ref: ReferenceItem = new ReferenceItem('Updated Facts and Figures', 2023);

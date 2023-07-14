@@ -10,4 +10,4 @@ Program is executed from the command line:
 - open terminal of your choice, navigate to project folder and run `tsc` command to compile the app
 - open second terminal and go to `js` folder, run `node app.js` command to run the app
 
-// TODO: Proceed from 7. Extending Classes with Inheritance (5:00)
+// TODO: Proceed from 7. Abstract Classes
