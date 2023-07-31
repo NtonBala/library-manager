@@ -121,8 +121,18 @@ function PrintBook(currentBook: Book) {
 }
 
 // * Program code:
-let refBook: ReferenceItem = new Encyclopedia('WorldPedia', 1900, 10);
-refBook.printCitation();
+let Newspaper = class Test extends ReferenceItem {
+  printCitation(): void {
+    console.log(`Newspaper: ${this.title}`);
+  }
+};
+
+let myPaper = new Newspaper('The Gazette', 2022);
+
+myPaper.printCitation();
+
+// let refBook: ReferenceItem = new Encyclopedia('WorldPedia', 1900, 10);
+// refBook.printCitation();
 
 // let ref: ReferenceItem = new ReferenceItem('Updated Facts and Figures', 2023);
 
