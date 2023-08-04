@@ -131,6 +131,17 @@ let myPaper = new Newspaper('The Gazette', 2022);
 
 myPaper.printCitation();
 
+class Novel extends class {
+  title: string;
+} {
+  mainCharacter: string;
+}
+
+let favoriteNovel = new Novel();
+favoriteNovel.title = 'The Old Man and the Sea';
+favoriteNovel.mainCharacter = 'the Old Man';
+console.log(`Main character of ${favoriteNovel.title} is ${favoriteNovel.mainCharacter}`);
+
 // let refBook: ReferenceItem = new Encyclopedia('WorldPedia', 1900, 10);
 // refBook.printCitation();
 
