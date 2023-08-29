@@ -1,6 +1,10 @@
 import { Category } from './enums';
 import { Book, Logger, Author, Librarian } from './interfaces';
-import { UniversityLibrarian, ReferenceItem, Encyclopedia } from './classes';
+import { UniversityLibrarian, ReferenceItem } from './classes';
+import refBook from './encyclopedia';
+
+let reference = new refBook('Fact Book', 2022, 1);
+reference.printItem();
 
 function GetAllBooks(): Book[] {
   let books = [
@@ -121,26 +125,26 @@ function PrintBook(currentBook: Book) {
 }
 
 // * Program code:
-let Newspaper = class Test extends ReferenceItem {
-  printCitation(): void {
-    console.log(`Newspaper: ${this.title}`);
-  }
-};
+// let Newspaper = class Test extends ReferenceItem {
+//   printCitation(): void {
+//     console.log(`Newspaper: ${this.title}`);
+//   }
+// };
 
-let myPaper = new Newspaper('The Gazette', 2022);
+// let myPaper = new Newspaper('The Gazette', 2022);
 
-myPaper.printCitation();
+// myPaper.printCitation();
 
-class Novel extends class {
-  title: string;
-} {
-  mainCharacter: string;
-}
+// class Novel extends class {
+//   title: string;
+// } {
+//   mainCharacter: string;
+// }
 
-let favoriteNovel = new Novel();
-favoriteNovel.title = 'The Old Man and the Sea';
-favoriteNovel.mainCharacter = 'the Old Man';
-console.log(`Main character of ${favoriteNovel.title} is ${favoriteNovel.mainCharacter}`);
+// let favoriteNovel = new Novel();
+// favoriteNovel.title = 'The Old Man and the Sea';
+// favoriteNovel.mainCharacter = 'the Old Man';
+// console.log(`Main character of ${favoriteNovel.title} is ${favoriteNovel.mainCharacter}`);
 
 // let refBook: ReferenceItem = new Encyclopedia('WorldPedia', 1900, 10);
 // refBook.printCitation();
