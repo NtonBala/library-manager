@@ -4,6 +4,7 @@ enum Category {
   Fiction,
   History,
   Children,
+  Software,
 }
 
 export { Category };

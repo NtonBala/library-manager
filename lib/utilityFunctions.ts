@@ -14,4 +14,9 @@ function privateFunc(): void {
   console.log('This is private...');
 }
 
-export { CalculateLateFee, MaxBooksAllowed };
+function Purge<T>(inventory: Array<T>): Array<T> {
+  // * Emulate the extraction of old items from inventory array and returning them as an array of purged items
+  return inventory.splice(2, inventory.length);
+}
+
+export { CalculateLateFee, MaxBooksAllowed, Purge };

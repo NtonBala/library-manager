@@ -2,9 +2,7 @@ import { Category } from './enums';
 import { Book, Logger, Author, Librarian } from './interfaces';
 import { UniversityLibrarian, ReferenceItem } from './classes';
 import refBook from './encyclopedia';
-
-let reference = new refBook('Fact Book', 2022, 1);
-reference.printItem();
+import { Purge } from './lib/utilityFunctions';
 
 function GetAllBooks(): Book[] {
   let books = [
@@ -125,32 +123,12 @@ function PrintBook(currentBook: Book) {
 }
 
 // * Program code:
-// let Newspaper = class Test extends ReferenceItem {
-//   printCitation(): void {
-//     console.log(`Newspaper: ${this.title}`);
-//   }
-// };
+const inventory: Array<Book> = [
+  { id: 10, title: 'The C Programming Language', author: 'K & R', available: true, category: Category.Software },
+  { id: 11, title: 'Code Complete', author: 'Steve McConnell', available: true, category: Category.Software },
+  { id: 12, title: '8-Bit Graphics with Cobol', author: 'A. B.', available: true, category: Category.Software },
+  { id: 13, title: 'Cool autoexec.bat Scripts!', author: 'C. D.', available: true, category: Category.Software },
+];
 
-// let myPaper = new Newspaper('The Gazette', 2022);
-
-// myPaper.printCitation();
-
-// class Novel extends class {
-//   title: string;
-// } {
-//   mainCharacter: string;
-// }
-
-// let favoriteNovel = new Novel();
-// favoriteNovel.title = 'The Old Man and the Sea';
-// favoriteNovel.mainCharacter = 'the Old Man';
-// console.log(`Main character of ${favoriteNovel.title} is ${favoriteNovel.mainCharacter}`);
-
-// let refBook: ReferenceItem = new Encyclopedia('WorldPedia', 1900, 10);
-// refBook.printCitation();
-
-// let ref: ReferenceItem = new ReferenceItem('Updated Facts and Figures', 2023);
-
-// ref.printItem();
-// ref.publisher = 'Random Data Publishing';
-// console.log(ref.publisher);
+let purgedBooks: Array<Book> = Purge(inventory);
+purgedBooks.forEach((book) => console.log(book.title));
