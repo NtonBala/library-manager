@@ -132,3 +132,6 @@ const inventory: Array<Book> = [
 
 let purgedBooks: Array<Book> = Purge(inventory);
 purgedBooks.forEach((book) => console.log(book.title));
+
+let purgedNums: Array<number> = Purge<number>([1, 2, 3, 4]);
+console.log(purgedNums); // => [3, 4]
