@@ -10,4 +10,4 @@ Program is executed from the command line:
 - open terminal of your choice, navigate to project folder and run `tsc` command to compile the app
 - open second terminal and go to `js` folder, run `node app.js` command to run the app
 
-// TODO: Proceed from module 9 Generics: Generic Interfaces and Classes
+// TODO: Proceed from module 9 Generics: Generic Interfaces and Classes (4:34)
