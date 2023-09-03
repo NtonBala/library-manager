@@ -12,4 +12,12 @@ export default class Shelf<T> {
   getFirst(): T {
     return this._items[0];
   }
+
+  find(title: string): T {
+    return this._items.filter((item) => item.title === title)[0];
+  }
+
+  printTitles(): void {
+    this._items.forEach((item) => console.log(item.title));
+  }
 }
