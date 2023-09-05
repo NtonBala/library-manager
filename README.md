@@ -10,4 +10,4 @@ Program is executed from the command line:
 - open terminal of your choice, navigate to project folder and run `tsc` command to compile the app
 - open second terminal and go to `js` folder, run `node app.js` command to run the app
 
-// TODO: Proceed from module 10 Compiler Options and Project Configuration: Finding and Using Compiler Options
+// TODO: Proceed from module 10 Compiler Options and Project Configuration: Configuring Projects with tsconfig.json
