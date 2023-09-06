@@ -4,5 +4,8 @@
     "outDir": "js",
     "module": "CommonJS",
     "sourceMap": true
-  }
+  },
+  // Specify filenames for the compiler to compile.
+  // The compiler will automatically compile all dependent files, even if they're not explicitly included in the compilation.
+  "files": ["app.ts"]
 }
