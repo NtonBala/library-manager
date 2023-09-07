@@ -12,4 +12,4 @@ Program is executed from the command line:
 
 To delete all files in `js` directory run in terminal `rm -rf js/*` command.
 
-// TODO: Proceed from module 10 Compiler Options and Project Configuration: Configuring Projects with tsconfig.json (2:15)
+// TODO: Proceed from module 10 Compiler Options and Project Configuration: Configuring Projects with tsconfig.json (2:51)

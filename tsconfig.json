@@ -5,7 +5,8 @@
     "module": "CommonJS",
     "sourceMap": true
   },
-  // Specify filenames for the compiler to compile.
-  // The compiler will automatically compile all dependent files, even if they're not explicitly included in the compilation.
-  "files": ["app.ts"]
+  // * Lets specify an array including what files to compile, but instead of listing individual files,
+  // * we can add blobs, and the compiler will include all files that match the provided pattern.
+  // * Compile all files with .ts extension from the current directory and its subdirectories:
+  "include": ["**/*.ts"]
 }
