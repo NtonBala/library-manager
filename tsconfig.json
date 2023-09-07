@@ -8,5 +8,7 @@
   // * Lets specify an array including what files to compile, but instead of listing individual files,
   // * we can add blobs, and the compiler will include all files that match the provided pattern.
   // * Compile all files with .ts extension from the current directory and its subdirectories:
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts"],
+  // * Pair "include" option with the "exclude" option.
+  "exclude": ["./lib/*"]
 }
