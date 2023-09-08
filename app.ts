@@ -2,7 +2,6 @@ import { Category } from './enums';
 import { Book, Logger, Author, Librarian, Magazine } from './interfaces';
 import { UniversityLibrarian, ReferenceItem } from './classes';
 import refBook from './encyclopedia';
-import { Purge } from './lib/utilityFunctions';
 import Shelf from './shelf';
 
 function GetAllBooks(): Book[] {
