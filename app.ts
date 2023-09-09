@@ -3,6 +3,10 @@ import { Book, Logger, Author, Librarian, Magazine } from './interfaces';
 import { UniversityLibrarian, ReferenceItem } from './classes';
 import refBook from './encyclopedia';
 import Shelf from './shelf';
+import * as _ from 'lodash';
+
+let snakeCaseTitle: string = _.snakeCase('For Whom the Bell Tolls');
+console.log(snakeCaseTitle);
 
 function GetAllBooks(): Book[] {
   let books = [
@@ -136,25 +140,25 @@ const inventory: Array<Book> = [
 // let purgedNums: Array<number> = Purge<number>([1, 2, 3, 4]);
 // console.log(purgedNums); // => [3, 4]
 
-let bookShelf: Shelf<Book> = new Shelf<Book>();
+// let bookShelf: Shelf<Book> = new Shelf<Book>();
 
-inventory.forEach((book) => bookShelf.add(book));
+// inventory.forEach((book) => bookShelf.add(book));
 
-let firstBook: Book = bookShelf.getFirst();
+// let firstBook: Book = bookShelf.getFirst();
 
-let magazines: Array<Magazine> = [
-  { title: 'Programming Language Monthly', publisher: 'Code Mags' },
-  { title: 'Literary Fiction Quarterly', publisher: 'College Press' },
-  { title: 'Five Points', publisher: 'GSU' },
-];
+// let magazines: Array<Magazine> = [
+//   { title: 'Programming Language Monthly', publisher: 'Code Mags' },
+//   { title: 'Literary Fiction Quarterly', publisher: 'College Press' },
+//   { title: 'Five Points', publisher: 'GSU' },
+// ];
 
-let magazineShelf: Shelf<Magazine> = new Shelf<Magazine>();
+// let magazineShelf: Shelf<Magazine> = new Shelf<Magazine>();
 
-magazines.forEach((magazine) => magazineShelf.add(magazine));
+// magazines.forEach((magazine) => magazineShelf.add(magazine));
 
-let firstMagazine: Magazine = magazineShelf.getFirst();
+// let firstMagazine: Magazine = magazineShelf.getFirst();
 
-magazineShelf.printTitles();
+// magazineShelf.printTitles();
 
-let softwareBook = bookShelf.find('Code Complete');
-console.log(`${softwareBook.title} (${softwareBook.author})`);
+// let softwareBook = bookShelf.find('Code Complete');
+// console.log(`${softwareBook.title} (${softwareBook.author})`);
