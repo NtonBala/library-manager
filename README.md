@@ -7,7 +7,7 @@ The project relates to [TypeScript 4 In-Depth](https://app.pluralsight.com/libra
 Program is executed from the command line:
 
 - install Node.JS and TS (globally)
-- open terminal of your choice, navigate to project folder and run `tsc` command to compile the app
+- open terminal of your choice, navigate to project folder and run `tsc` command to compile the app (repeat manually)
 - open second terminal and go to `js` folder, run `node app.js` command to run the app
 
 To delete all files in `js` directory run in terminal `rm -rf js/*` command.
